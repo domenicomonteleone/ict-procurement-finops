@@ -1,61 +1,80 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio GitHub di Domenico Monteleone - Progetti di Data Analytics, Supply Chain e Business Intelligence">
-    <title>Domenico Monteleone - GitHub Projects Documentation</title>
+    <meta name="description" content="ICT Procurement & FinOps Analytics Portfolio — Domenico Monteleone. Automation tools, supplier intelligence and decision-support systems for ICT procurement and cloud cost management.">
+    <title>Domenico Monteleone — ICT Procurement & FinOps Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            
-             --primary-color: #FFD700;       /* giallo oro */
-  --secondary-color: #C3B6F5;     /* slate blue (complementare) */
-  --accent-color: #FFA500;        /* arancione scuro (analogo) */
-            --bg-dark: #1a1a1a;
-            --bg-card: rgba(40, 40, 40, 0.9);
-            --text-primary: #e0e0e0;
-            --text-secondary: #b0b0b0;
-            --text-muted: #888;
-            --border-color: rgba(80, 80, 80, 0.3);
-            --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.2);
-            --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.3);
-            --transition: all 0.3s ease;
-            --border-radius: 20px;
-            --border-radius-sm: 10px;
+            --ink:         #0a0a0f;
+            --paper:       #f5f2eb;
+            --gold:        #FFD700;
+            --gold-dim:    rgba(255,215,0,.12);
+            --gold-border: rgba(255,215,0,.22);
+            --text:        rgba(245,242,235,.62);
+            --text-soft:   rgba(245,242,235,.35);
+            --line:        rgba(245,242,235,.07);
+            --surface:     rgba(245,242,235,.03);
+            --surface-h:   rgba(245,242,235,.06);
+            --paper-dim:   rgba(245,242,235,.08);
+            --paper-border:rgba(245,242,235,.18);
+            --sans:        'Roboto', sans-serif;
+            --radius:      14px;
+            --transition:  all 0.28s ease;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255,215,0,.2) transparent;
         }
+
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,215,0,.2); border-radius: 3px; }
+        ::-webkit-scrollbar-track { background: transparent; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--bg-dark);
+            font-family: var(--sans);
+            font-weight: 300;
+            line-height: 1.65;
+            color: var(--paper);
+            background: var(--ink);
             min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            opacity: .05;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 24px 80px;
+            position: relative;
+            z-index: 1;
         }
 
-        /* Header Styles */
+        /* ── HEADER ── */
         .header {
-            text-align: center;
-            margin-bottom: 60px;
-            background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            border-radius: var(--border-radius);
-            padding: 40px;
-            box-shadow: var(--shadow-heavy);
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--gold-border);
+            border-radius: var(--radius);
+            background: var(--surface);
+            padding: 48px 40px 40px;
+            margin-bottom: 48px;
             position: relative;
             overflow: hidden;
         }
@@ -63,835 +82,643 @@
         .header::before {
             content: '';
             position: absolute;
-            inset: 0;
-            background-image: 
-                radial-gradient(circle at 20% 30%, rgba(100, 181, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(66, 165, 245, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(100, 181, 246, 0.05) 0%, transparent 50%);
+            top: -60px; right: -60px;
+            width: 260px; height: 260px;
+            background: radial-gradient(circle, rgba(255,215,0,.07) 0%, transparent 70%);
             pointer-events: none;
-            z-index: 0;
         }
 
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .user-title {
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .user-title i {
-            color: var(--primary-color);
-            filter: drop-shadow(0 0 10px rgba(100, 181, 246, 0.5));
-            animation: pulse 2s infinite;
-        }
-
-        .tagline {
-            margin-bottom: 20px;
-        }
-
-        .keywords {
-            font-size: 1.1rem;
-            color: var(--primary-color);
+        .header-eyebrow {
+            font-size: .75rem;
             font-weight: 500;
-            letter-spacing: 1px;
+            letter-spacing: .18em;
             text-transform: uppercase;
-            opacity: 0.9;
-        }
-
-        .main-title {
-            font-size: clamp(2rem, 5vw, 2.8rem);
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto 20px;
-        }
-
-        .breadcrumb {
+            color: var(--gold);
+            opacity: .8;
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
+            gap: 10px;
+        }
+
+        .header-eyebrow::before {
+            content: '';
+            width: 28px; height: 1px;
+            background: var(--gold);
+            opacity: .5;
+        }
+
+        .header h1 {
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+            font-weight: 700;
+            color: var(--paper);
+            margin-bottom: 10px;
+            letter-spacing: -.01em;
+        }
+
+        .header h1 em {
+            font-style: normal;
+            color: var(--gold);
+        }
+
+        .header-tagline {
+            font-size: 1rem;
+            color: var(--text);
+            max-width: 620px;
+            margin-bottom: 28px;
+            line-height: 1.7;
+        }
+
+        .header-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        /* gold pills */
+        .pill {
+            font-size: .72rem;
+            font-weight: 500;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid var(--gold-border);
+            background: var(--gold-dim);
+            border-radius: 20px;
+            padding: 4px 14px;
+        }
+
+        /* paper/white pills (replaced cold/blue) */
+        .pill.soft {
+            color: var(--paper);
+            border-color: var(--paper-border);
+            background: var(--paper-dim);
+        }
+
+        .header-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hlink {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: .85rem;
+            color: var(--text);
+            text-decoration: none;
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            padding: 7px 16px;
+            background: var(--surface);
+            transition: var(--transition);
+        }
+
+        .hlink:hover {
+            border-color: var(--gold-border);
+            color: var(--gold);
+            background: var(--gold-dim);
+        }
+
+        /* ── NAV ── */
+        .nav {
+            display: flex;
             justify-content: center;
             gap: 10px;
-            margin-top: 25px;
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        .breadcrumb a {
-    color: var(--primary-color);
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 25px;
-    background: rgba(255, 165, 0, 0.1); /* arancione chiaro */
-    border: 1px solid rgba(255, 165, 0, 0.2);
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.breadcrumb a:hover {
-    background: rgba(255, 127, 80, 0.2);     /* coral */
-    border-color: rgba(255, 127, 80, 0.4);   /* coral più visibile */
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 127, 80, 0.3);
-        }
-
-        /* Navigation */
-        .nav-sections {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 50px;
             flex-wrap: wrap;
+            margin-bottom: 40px;
         }
 
         .nav-btn {
-            padding: 12px 24px;
-            background: var(--bg-card);
-            border: 2px solid rgba(100, 181, 246, 0.3);
-            border-radius: 25px;
-            color: var(--text-primary);
-            text-decoration: none;
-            transition: var(--transition);
-            font-weight: 500;
-            backdrop-filter: blur(5px);
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
+            padding: 10px 22px;
+            font-size: .85rem;
+            font-weight: 500;
+            font-family: var(--sans);
+            color: var(--text);
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            cursor: pointer;
+            transition: var(--transition);
         }
 
-        .nav-btn:hover, 
+        .nav-btn:hover,
         .nav-btn.active {
-            background: rgba(100, 181, 246, 0.2);
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-            transform: translateY(-2px);
+            color: var(--gold);
+            border-color: var(--gold-border);
+            background: var(--gold-dim);
         }
 
-        /* Sections */
+        /* ── SECTIONS ── */
         .section {
-            margin-bottom: 60px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
             display: none;
+            animation: fadeUp .4s ease both;
         }
 
-        .section.active {
-            opacity: 1;
-            transform: translateY(0);
-            display: block;
+        .section.active { display: block; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-header { margin-bottom: 28px; }
+
+        .section-label {
+            font-size: .72rem;
+            font-weight: 500;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: .7;
+            margin-bottom: 8px;
         }
 
         .section-title {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            text-align: center;
-            position: relative;
+            color: var(--paper);
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            border-radius: 2px;
+        .section-desc {
+            font-size: .9rem;
+            color: var(--text-soft);
+            margin-top: 6px;
         }
 
-        .section-subtitle {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            text-align: center;
-            margin-top: -38px;
-            margin-bottom: 30px;
-        }
+        /* ── CARDS ── */
+        .cards-list { display: flex; flex-direction: column; gap: 16px; }
 
-        /* Course/Project Cards */
-        .course-link {
-            display: block;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 15px;
-            text-decoration: none;
-            color: var(--text-primary);
+        .card {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--surface);
+            padding: 24px 26px;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
 
-        .course-link::before {
+        .card::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            transition: left 0.4s ease;
+            top: 0; left: 0;
+            width: 3px; height: 100%;
+            background: var(--gold);
+            opacity: 0;
+            transition: var(--transition);
         }
 
-        .course-link:hover::before {
-            left: 0;
+        .card:hover {
+            border-color: var(--gold-border);
+            background: var(--surface-h);
+            transform: translateX(4px);
         }
 
-        .course-link:hover {
-            border-color: var(--primary-color);
-            background: rgba(100, 181, 246, 0.1);
-            transform: translateX(10px);
-            box-shadow: var(--shadow-light);
-        }
+        .card:hover::after { opacity: 1; }
 
-        .course-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 8px;
-        }
-
-        .course-description {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        .course-meta {
-            display: flex;
+        .card-badge {
+            display: inline-flex;
             align-items: center;
-            gap: 20px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            flex-wrap: wrap;
+            gap: 5px;
+            font-size: .68rem;
+            font-weight: 500;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: .7;
+            margin-bottom: 10px;
         }
 
-        .course-meta a {
-            color: var(--text-muted);
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--paper);
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: .88rem;
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .card-desc a {
+            color: var(--gold);
             text-decoration: none;
+        }
+
+        .card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .card-meta a,
+        .card-meta span {
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            font-size: .8rem;
+            color: var(--text-soft);
+            text-decoration: none;
             transition: var(--transition);
         }
 
-        .course-meta a:hover {
-            color: var(--primary-color);
+        .card-meta a:hover { color: var(--gold); }
+
+        /* tags — only gold and paper, no blue */
+        .tag {
+            font-size: .7rem;
+            font-weight: 500;
+            letter-spacing: .06em;
+            padding: 3px 10px;
+            border-radius: 12px;
         }
 
-        .course-meta a:hover .hover-icon {
-            color: var(--primary-color);
-            transform: scale(1.2);
+        .tag.gold {
+            border: 1px solid var(--gold-border);
+            color: var(--gold);
+            background: var(--gold-dim);
         }
 
-        .hover-icon {
-            transition: var(--transition);
+        .tag.soft {
+            border: 1px solid var(--paper-border);
+            color: var(--paper);
+            background: var(--paper-dim);
         }
 
-        /* Stats Section */
-        .stats-section {
-            background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            border-radius: var(--border-radius);
-            padding: 40px;
-            box-shadow: var(--shadow-heavy);
-            border: 1px solid var(--border-color);
-            text-align: center;
-            margin-top: 60px;
+        .tag.muted {
+            border: 1px solid var(--line);
+            color: var(--text-soft);
         }
 
-        .stats-grid {
+        /* ── STATS ── */
+        .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--line);
         }
 
-        .stat-item {
+        .stat {
             text-align: center;
+            padding: 20px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--surface);
         }
 
-        .stat-number {
-            font-size: 2.5rem;
+        .stat-num {
+            font-size: 1.6rem;
             font-weight: 700;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--gold);
             display: block;
+            letter-spacing: -.02em;
         }
 
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 5px;
+        .stat-lbl {
+            font-size: .78rem;
+            color: var(--text-soft);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: .08em;
         }
 
-        /* Footer */
+        /* ── FOOTER ── */
         .footer {
             margin-top: 60px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 30px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-            align-items: start;
-        }
-
-        .footer-info {
-            color: var(--text-muted);
+            padding-top: 28px;
+            border-top: 1px solid var(--line);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 28px;
         }
 
         .footer-info p {
-            margin-bottom: 8px;
+            font-size: .82rem;
+            color: var(--text-soft);
+            line-height: 1.8;
         }
 
-        .footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
+        .footer-info a { color: var(--gold); text-decoration: none; }
 
-        .footer a:hover {
-            color: var(--secondary-color);
-        }
-
-        .social-links h4 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-        }
-
-        .social-link {
+        .footer-links {
             display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px 15px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius-sm);
-            color: var(--text-primary);
+            gap: 7px;
+            font-size: .82rem;
+            color: var(--text-soft);
             text-decoration: none;
+            padding: 7px 14px;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            background: var(--surface);
             transition: var(--transition);
-            font-size: 0.9rem;
         }
 
-        .social-link:hover {
-            background: rgba(100, 181, 246, 0.2);
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-            transform: translateY(-2px);
+        .footer-links a:hover {
+            color: var(--gold);
+            border-color: var(--gold-border);
+            background: var(--gold-dim);
         }
 
-        .social-link i {
-            font-size: 1.1rem;
-            width: 20px;
-            text-align: center;
+        /* ── RESPONSIVE ── */
+        @media (max-width: 640px) {
+            .header { padding: 32px 22px 28px; }
+            .container { padding: 24px 16px 60px; }
+            .footer { flex-direction: column; }
         }
 
-        /* Animations */
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            
-            .header {
-                padding: 30px 20px;
-            }
-            
-            .user-title {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .breadcrumb {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-sections {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .course-meta {
-                gap: 15px;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                text-align: center;
-            }
-
-            .social-grid {
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-                gap: 10px;
-            }
-
-            .social-link {
-                padding: 8px 12px;
-                font-size: 0.85rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .course-meta {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-        }
-
-        /* Performance optimizations */
-        .course-link,
-        .nav-btn,
-        .social-link {
-            will-change: transform;
-        }
-
-        /* Accessibility improvements */
         @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
+            *, ::before, ::after {
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important;
             }
         }
 
-        /* Focus states for accessibility */
-        .nav-btn:focus,
-        .course-link:focus,
-        .social-link:focus {
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
+        :focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 3px;
         }
-		
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header-content">
-                <h1 class="user-title">
-                    <i class="fab fa-github" aria-hidden="true"></i> 
-                    Domenico Monteleone
-                </h1>
-                
-                <div class="tagline">
-                    <span class="keywords">Analysis | Innovation | Optimization | Creativity</span>
-                </div>
-                
-                <h2 class="main-title">GitHub Portfolio Structure</h2>
-                
-                <p>Real-world and course-based projects focused on generating <strong>business insights</strong> and supporting <strong>data-driven decisions</strong>.</p>
-                
-                <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <a href="https://domenicomonteleone.altervista.org" rel="home">
-                        <i class="fas fa-home" aria-hidden="true"></i> Portfolio
-                    </a>
-                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                    <span aria-current="page">GitHub Projects</span>
-                </nav>
-            </div>
-        </header>
+<div class="container">
 
-        <nav class="nav-sections" role="navigation" aria-label="Project categories">
-            <button class="nav-btn active" data-section="certification-courses" type="button">
-                <i class="fas fa-graduation-cap" aria-hidden="true"></i> Certification-Courses
-            </button>
-            <button class="nav-btn" data-section="personal-projects" type="button">
-                <i class="fas fa-user-cog" aria-hidden="true"></i> Personal-Projects
-            </button>
-            <button class="nav-btn" data-section="technology-based" type="button">
-                <i class="fas fa-flask" aria-hidden="true"></i> Technology-Based
-            </button>
-            <button class="nav-btn" data-section="dashboards-interactive" type="button">
-                <i class="fas fa-chart-pie" aria-hidden="true"></i> Dashboards-Interactive
-            </button>
-            <button class="nav-btn" data-section="resources-templates" type="button">
-                <i class="fas fa-rocket" aria-hidden="true"></i> Resources-Templates
-            </button>
+    <!-- ── HEADER ── -->
+    <header class="header">
+        <p class="header-eyebrow">GitHub Portfolio</p>
+        <h1>ICT Procurement &amp; <em>FinOps</em> Analytics</h1>
+        <p class="header-tagline">
+            Projects applying data, automation (Python) and reporting systems to ICT procurement,
+            FinOps and vendor management — supporting cost optimization and strategic sourcing decisions.
+        </p>
+        <div class="header-pills">
+            <span class="pill">ICT Procurement</span>
+            <span class="pill">FinOps Analytics</span>
+            <span class="pill">Vendor Intelligence</span>
+            <span class="pill">TCO Modeling</span>
+            <span class="pill soft">Python · SQLite</span>
+            <span class="pill soft">Decision Support</span>
+        </div>
+        <nav class="header-links" aria-label="External links">
+            <a href="https://domenicomonteleone.com" class="hlink" target="_blank" rel="noopener">
+                <i class="fas fa-globe" aria-hidden="true"></i> domenicomonteleone.com
+            </a>
+            <a href="https://www.linkedin.com/in/domenicomonteleone/" class="hlink" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+            <a href="https://github.com/domenicomonteleone" class="hlink" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
         </nav>
+    </header>
 
-        <main>
-            <!-- Certification Courses Section -->
-            <section id="certification-courses" class="section active">
-                <h2 class="section-title">Certification-Courses</h2>
-                <h3 class="section-subtitle">Projects from professional courses</h3>
-                
-                <div class="courses-list">
-                    <article class="course-link">
-                        <h3 class="course-title">Google-Data-Analytics</h3>
-                        <p class="course-description">
-                            This is my capstone project for <strong>Google's Data Analytics Professional Certificate</strong>. 
-                            Presented in the final course, it applies the entire data analysis process to a real-world case study 
-                            using the <strong>6-Phase Analysis Methodology</strong>: 
-                            <strong>Ask → Prepare → Process → Analyze → Share → Act</strong>.<br><br>
-                            <strong>Explore the complete project through the links below</strong> to view the detailed project report, 
-                            examine the code and methodology in the repository, and verify the professional certification.
-                        </p>
-                        <div class="course-meta">
-                            <a href="00-retail-demand-forecasting.html" 
-                               target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-chart-line hover-icon" aria-hidden="true"></i> Project Report
-                            </a>
-                            <a href="https://github.com/domenicomonteleone/data-analytics-portfolio/tree/main/00_Certification_courses/00_Google-Data-Analytics" 
-                               target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github hover-icon" aria-hidden="true"></i> Repository
-                            </a>
-                            <a href="https://www.coursera.org/account/accomplishments/professional-cert/7DGPJOGQ0ZPU" 
-                               target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-certificate hover-icon" aria-hidden="true"></i> Certificate
-                            </a>
-                        </div>
-                    </article>
-					
-					<!-- corso 2 -->
-					<article class="course-link">
-                        <h3 class="course-title">Supply Chain Management</h3>
-                        <p class="course-description">
-                            This is my capstone project for the <strong>Supply Chain Management Specialization</strong> from Rutgers, The State University of New Jersey. <br>
-Presented as the final project for the specialization, it outlines a strategic approach to managing the Medical Device Excise Tax through a comprehensive <strong>Supply Chain & Sourcing Plan</strong> for Medical Technologies Corporation (MTC).<br><br>
-<strong>Explore the complete project through the links below</strong> to view the detailed project presentation on my youtube channel and verify the professional certification.
-                        </p>
-                        <div class="course-meta">
-                            <a href="https://www.youtube.com/watch?v=K3xFGajRr7Y" 
-                               target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-youtube hover-icon" aria-hidden="true"></i> Project Presentation
-                            </a>
-                            
-                            <a href="https://www.coursera.org/account/accomplishments/specialization/SJOQEOCJAJU3" 
-                               target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-certificate hover-icon" aria-hidden="true"></i> Certificate
-                            </a>
-                        </div>
-                    </article>
-					
-                </div>
-            </section>
+    <!-- ── NAV ── -->
+    <nav class="nav" role="navigation" aria-label="Project categories">
+        <button class="nav-btn active" data-section="procurement-finops" type="button">
+            <i class="fas fa-chart-line" aria-hidden="true"></i> Procurement &amp; FinOps
+        </button>
+        <button class="nav-btn" data-section="automation-tools" type="button">
+            <i class="fas fa-cogs" aria-hidden="true"></i> Automation &amp; Tools
+        </button>
+        <button class="nav-btn" data-section="learning" type="button">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i> Learning &amp; Certifications
+        </button>
+    </nav>
 
-            <!-- Personal Projects Section -->
-            <section id="personal-projects" class="section">
-                <h2 class="section-title">Personal-Projects</h2>
-                <h3 class="section-subtitle">Independent research and development</h3>
-                <div class="courses-list">
-                    <article class="course-link">
-                        <h3 class="course-title">Coming Soon</h3>
-                        <p class="course-description">Personal projects section is under development. Check back soon for innovative solutions and independent research projects.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock" aria-hidden="true"></i> In Development</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
+    <!-- ── MAIN ── -->
+    <main>
 
-            <!-- Technology Based Section -->
-            <section id="technology-based" class="section">
-                <h2 class="section-title">Technology-Based</h2>
-                <h3 class="section-subtitle">Technology-focused experiments and implementations</h3>
-                <div class="courses-list">
-                    <article class="course-link">
-                        <h3 class="course-title">Coming Soon</h3>
-                        <p class="course-description">Technology-based projects section is under development. Expect cutting-edge implementations and technical experiments.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock" aria-hidden="true"></i> In Development</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
+        <!-- SECTION 1 -->
+        <section id="procurement-finops" class="section active">
+            <div class="section-header">
+                <p class="section-label">Section 01</p>
+                <h2 class="section-title">Procurement &amp; FinOps Analytics</h2>
+                <p class="section-desc">Real-world systems built to support ICT procurement decisions, cost control and vendor management.</p>
+            </div>
+            <div class="cards-list">
 
-            <!-- Dashboards Interactive Section -->
-            <section id="dashboards-interactive" class="section">
-                <h2 class="section-title">Dashboards-Interactive</h2>
-                <h3 class="section-subtitle">Interactive visualizations and business intelligence</h3>
-                <div class="courses-list">
-                    <article class="course-link">
-                        <h3 class="course-title">Coming Soon</h3>
-                        <p class="course-description">Interactive dashboards section is under development. Prepare for dynamic visualizations and real-time analytics.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock" aria-hidden="true"></i> In Development</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
+                <article class="card">
+                    <p class="card-badge"><i class="fas fa-fire" aria-hidden="true"></i> Featured project</p>
+                    <h3 class="card-title">FinOps Budget Intelligence System</h3>
+                    <p class="card-desc">
+                        Automated FinOps reporting system developed to support ICT procurement decisions in an enterprise cloud environment,
+                        without relying on expensive SaaS tools. Built on top of passive invoice data, the system classifies spend by vendor,
+                        category (OPEX/CAPEX) and recurrence type — enabling continuous monitoring of budget consumption, supplier behaviour
+                        and cost anomalies across multiple ICT categories and a structured vendor panel.
+                        Outputs a multi-sheet Excel report with spend trends, year-over-year variance, budget vs. forecast and automated alerts
+                        for significant cost deviations.
+                    </p>
+                    <div class="card-meta">
+                        <span class="tag soft"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+                        <span class="tag soft"><i class="fas fa-database" aria-hidden="true"></i> SQLite</span>
+                        <span class="tag gold"><i class="fas fa-file-excel" aria-hidden="true"></i> Excel Report</span>
+                        <span class="tag muted">FinOps · Spend Analysis · Vendor Tracking</span>
+                    </div>
+                </article>
 
-            <!-- Resources Templates Section -->
-            <section id="resources-templates" class="section">
-                <h2 class="section-title">Resources-Templates</h2>
-                <h3 class="section-subtitle">Reusable templates and utilities</h3>
-                <div class="courses-list">
-                    <article class="course-link">
-                        <h3 class="course-title">Coming Soon</h3>
-                        <p class="course-description">Resources and templates section is under development. Look forward to reusable components and productivity tools.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock" aria-hidden="true"></i> In Development</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </main>
+                <article class="card">
+                    <p class="card-badge"><i class="fas fa-building" aria-hidden="true"></i> Supplier intelligence</p>
+                    <h3 class="card-title">CMDB — ICT Asset Analytics Tool</h3>
+                    <p class="card-desc">
+                        Configuration Management Database built with Python and SQLite to track ICT assets, software licenses and vendor contracts.
+                        Includes an auto-generating dataset for testing and a reporting layer to support procurement planning,
+                        renewal management and TCO analysis. Available as a free resource on
+                        <a href="https://domenicomonteleone.com/strumenti-e-risorse/" target="_blank" rel="noopener">domenicomonteleone.com</a>.
+                    </p>
+                    <div class="card-meta">
+                        <span class="tag soft"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+                        <span class="tag soft"><i class="fas fa-database" aria-hidden="true"></i> SQLite</span>
+                        <span class="tag muted">Asset Management · TCO · Contract Tracking</span>
+                        <a href="https://domenicomonteleone.com/strumenti-e-risorse/" target="_blank" rel="noopener">
+                            <i class="fas fa-download" aria-hidden="true"></i> Free download
+                        </a>
+                    </div>
+                </article>
 
-        <section class="stats-section">
-            <h2 style="color: var(--primary-color); margin-bottom: 20px;">Repository Statistics</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number" id="totalRepos">1</span>
-                    <div class="stat-label">Total Repositories</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="totalStars">15</span>
-                    <div class="stat-label">Stars Received</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="totalForks">5</span>
-                    <div class="stat-label">Forks</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="languages">3</span>
-                    <div class="stat-label">Languages</div>
-                </div>
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p>&copy; <span id="currentYear">2024</span> <a href="https://domenicomonteleone.altervista.org">Domenico Monteleone</a></p>
-                    <p>Supply Chain Optimization Analyst</p>
-                </div>
-                
-                <div class="social-links">
-                    <h4>Contacts & Social</h4>
-                    <div class="social-grid">
-                        <a href="https://domenicomonteleone.altervista.org" class="social-link">
-                            <i class="fas fa-globe" aria-hidden="true"></i>
-                            <span>Portfolio</span>
+        <!-- SECTION 2 -->
+        <section id="automation-tools" class="section">
+            <div class="section-header">
+                <p class="section-label">Section 02</p>
+                <h2 class="section-title">Automation &amp; Reporting Tools</h2>
+                <p class="section-desc">Scripts and utilities automating procurement workflows, data pipelines and operational reporting.</p>
+            </div>
+            <div class="cards-list">
+
+                <article class="card">
+                    <p class="card-badge"><i class="fas fa-robot" aria-hidden="true"></i> Automation</p>
+                    <h3 class="card-title">Vendor Classification Pipeline</h3>
+                    <p class="card-desc">
+                        Weekly automation script that checks new suppliers appearing in invoice data and flags unclassified vendors for review.
+                        Generates a structured Excel output for manual classification and re-import into the FinOps database —
+                        keeping the vendor master clean without manual intervention.
+                    </p>
+                    <div class="card-meta">
+                        <span class="tag soft"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+                        <span class="tag soft"><i class="fas fa-database" aria-hidden="true"></i> SQLite</span>
+                        <span class="tag muted">Vendor Master · Data Quality · Procurement Ops</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <p class="card-badge"><i class="fas fa-file-invoice" aria-hidden="true"></i> Data pipeline</p>
+                    <h3 class="card-title">SDI XML Invoice Importer</h3>
+                    <p class="card-desc">
+                        Parser and importer for Italian e-invoices (SDI XML format). Extracts structured data from raw invoice files,
+                        normalises vendor information by VAT number and feeds a SQLite database used for spend analysis and FinOps reporting.
+                    </p>
+                    <div class="card-meta">
+                        <span class="tag soft"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+                        <span class="tag muted">XML Parsing · E-invoicing · Data Pipeline</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section id="learning" class="section">
+            <div class="section-header">
+                <p class="section-label">Section 03</p>
+                <h2 class="section-title">Learning &amp; Certifications</h2>
+                <p class="section-desc">Selected coursework and capstone projects from professional certifications.</p>
+            </div>
+            <div class="cards-list">
+
+                <article class="card">
+                    <p class="card-badge"><i class="fas fa-certificate" aria-hidden="true"></i> Coursera · Google</p>
+                    <h3 class="card-title">Google Data Analytics — Capstone Project</h3>
+                    <p class="card-desc">
+                        Final project for Google's Data Analytics Professional Certificate. Applies the full 6-phase methodology
+                        (Ask → Prepare → Process → Analyze → Share → Act) to a real-world retail demand forecasting case study.
+                    </p>
+                    <div class="card-meta">
+                        <a href="00-retail-demand-forecasting.html" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i> Project Report
                         </a>
-                        <a href="https://www.linkedin.com/in/domenicomonteleone/" class="social-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                            <span>LinkedIn</span>
+                        <a href="https://github.com/domenicomonteleone/data-analytics-portfolio/tree/main/00_Certification_courses/00_Google-Data-Analytics" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github" aria-hidden="true"></i> Repository
                         </a>
-                        <a href="https://github.com/domenicomonteleone" class="social-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="https://www.youtube.com/@domenico.monteleone" class="social-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-youtube" aria-hidden="true"></i>
-                            <span>Youtube</span>
+                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/7DGPJOGQ0ZPU" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-certificate" aria-hidden="true"></i> Certificate
                         </a>
                     </div>
-                </div>
+                </article>
+
+                <article class="card">
+                    <p class="card-badge"><i class="fas fa-certificate" aria-hidden="true"></i> Coursera · Rutgers</p>
+                    <h3 class="card-title">Supply Chain Management Specialization — Capstone</h3>
+                    <p class="card-desc">
+                        Strategic Supply Chain &amp; Sourcing Plan for a medical technology company, developed as the final project
+                        for Rutgers' Supply Chain Management Specialization. Addresses procurement strategy, supplier selection
+                        and cost management in a regulated industry.
+                    </p>
+                    <div class="card-meta">
+                        <a href="https://www.youtube.com/watch?v=K3xFGajRr7Y" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube" aria-hidden="true"></i> Presentation
+                        </a>
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/SJOQEOCJAJU3" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-certificate" aria-hidden="true"></i> Certificate
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <p class="card-badge"><i class="fas fa-certificate" aria-hidden="true"></i> Coursera · Board Infinity</p>
+                    <h3 class="card-title">Cloud FinOps Specialization</h3>
+                    <p class="card-desc">
+                        Specialization covering cloud cost management frameworks, FinOps principles and cloud spend optimization practices.
+                        Applied to real-world ICT procurement and cloud infrastructure management contexts.
+                    </p>
+                    <div class="card-meta">
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/AZ2NPLUTANUZ" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-certificate" aria-hidden="true"></i> Certificate
+                        </a>
+                        <span class="tag gold">FinOps · Cloud Cost · IaaS/PaaS</span>
+                    </div>
+                </article>
+
             </div>
-        </footer>
+        </section>
+
+    </main>
+
+    <!-- ── STATS — generic, no company data ── -->
+    <div class="stats">
+        <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-lbl">Enterprise environments</span>
+        </div>
+        <div class="stat">
+            <span class="stat-num">60+</span>
+            <span class="stat-lbl">Vendors managed</span>
+        </div>
+        <div class="stat">
+            <span class="stat-num">Python<br>SQLite</span>
+            <span class="stat-lbl">Core stack</span>
+        </div>
+        <div class="stat">
+            <span class="stat-num">Multi-year</span>
+            <span class="stat-lbl">Spend dataset</span>
+        </div>
     </div>
 
-    <script>
-        // Configuration
-        const CONFIG = {
-            ANIMATION_DELAY: 100,
-            COUNTER_DURATION: 1500,
-            SECTION_TRANSITION: 600
-        };
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="footer-info">
+            <p>&copy; <span id="yr">2025</span> <a href="https://domenicomonteleone.com">Domenico Monteleone</a></p>
+            <p>ICT &amp; Cloud Buyer · Genova, Italy</p>
+        </div>
+        <div class="footer-links">
+            <a href="https://domenicomonteleone.com" target="_blank" rel="noopener">
+                <i class="fas fa-globe" aria-hidden="true"></i> Website
+            </a>
+            <a href="https://www.linkedin.com/in/domenicomonteleone/" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+            <a href="https://github.com/domenicomonteleone" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
+            <a href="https://www.youtube.com/@domenico.monteleone" target="_blank" rel="noopener">
+                <i class="fab fa-youtube" aria-hidden="true"></i> YouTube
+            </a>
+        </div>
+    </footer>
 
-        // Navigation Management
-        class NavigationManager {
-            constructor() {
-                this.navButtons = document.querySelectorAll('.nav-btn');
-                this.sections = document.querySelectorAll('.section');
-                this.init();
-            }
-
-            init() {
-                this.navButtons.forEach(btn => {
-                    btn.addEventListener('click', this.handleNavClick.bind(this));
-                });
-            }
-
-            handleNavClick(e) {
-                const targetSection = e.currentTarget.getAttribute('data-section');
-                this.showSection(targetSection, e.currentTarget);
-            }
-
-            showSection(targetId, activeBtn) {
-                // Update button states
-                this.navButtons.forEach(btn => btn.classList.remove('active'));
-                activeBtn.classList.add('active');
-
-                // Update section visibility
-                this.sections.forEach(section => {
-                    section.classList.remove('active');
-                    if (section.id === targetId) {
-                        setTimeout(() => section.classList.add('active'), 50);
-                    }
-                });
-            }
-        }
-
-        // Statistics Counter
-        class StatsCounter {
-            constructor() {
-                this.stats = {
-                    totalRepos: 1,
-                    totalStars: 15,
-                    totalForks: 5,
-                    languages: 3
-                };
-            }
-
-            animateCounter(elementId, targetValue) {
-                const element = document.getElementById(elementId);
-                if (!element) return;
-
-                let currentValue = 0;
-                const increment = targetValue / (CONFIG.COUNTER_DURATION / 50);
-                
-                const timer = setInterval(() => {
-                    currentValue += increment;
-                    if (currentValue >= targetValue) {
-                        element.textContent = targetValue;
-                        clearInterval(timer);
-                    } else {
-                        element.textContent = Math.floor(currentValue);
-                    }
-                }, 50);
-            }
-
-            init() {
-                Object.entries(this.stats).forEach(([key, value]) => {
-                    this.animateCounter(key, value);
-                });
-            }
-        }
-
-        // Utility Functions
-        const Utils = {
-            updateYear() {
-                const now = new Date();
-                const currentYear = now.getFullYear();
-                const baseYear = 2024;
-                
-                const yearText = currentYear > baseYear 
-                    ? `${baseYear}-${currentYear}` 
-                    : `${baseYear}`;
-                
-                const yearElement = document.getElementById('currentYear');
-                if (yearElement) {
-                    yearElement.textContent = yearText;
-                }
-            },
-
-            addLoadingAnimation() {
-                const cards = document.querySelectorAll('.course-link');
-                cards.forEach((card, index) => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(30px)';
-                    
-                    setTimeout(() => {
-                        card.style.transition = `all ${CONFIG.SECTION_TRANSITION}ms ease`;
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, index * CONFIG.ANIMATION_DELAY);
-                });
-            },
-
-            // Performance optimization: Throttle scroll events
-            throttle(func, wait) {
-                let timeout;
-                return function executedFunction(...args) {
-                    const later = () => {
-                        clearTimeout(timeout);
-                        func(...args);
-                    };
-                    clearTimeout(timeout);
-                    timeout = setTimeout(later, wait);
-                };
-            }
-        };
-
-        // Application Initialization
-        class App {
-            constructor() {
-                this.navigationManager = null;
-                this.statsCounter = null;
-            }
-
-            init() {
-                // Wait for DOM to be fully loaded
-                if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', this.bootstrap.bind(this));
-                } else {
-                    this.bootstrap();
-                }
-            }
-
-            bootstrap() {
-                try {
-                    // Initialize components
-                    this.navigationManager = new NavigationManager();
-                    this.statsCounter = new StatsCounter();
-
-                    // Run initialization tasks
-                    Utils.updateYear();
-                    
-                    // Delay animations slightly for better perceived performance
-                    setTimeout(() => {
-                        this.statsCounter.init();
-                        Utils.addLoadingAnimation();
-                    }, 300);
-                } catch (error) {
-                    console.error('Application initialization failed:', error);
-                }
-            }
-        }
-
-        // Initialize the application
-        const app = new App();
-        app.init();
-    </script>
+</div>
+<script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.dataset.section;
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById(target).classList.add('active');
+        });
+    });
+</script>
 </body>
 </html>
