@@ -136,7 +136,6 @@
             margin-bottom: 28px;
         }
 
-        /* gold pills */
         .pill {
             font-size: .72rem;
             font-weight: 500;
@@ -145,15 +144,15 @@
             color: var(--gold);
             border: 1px solid var(--gold-border);
             background: var(--gold-dim);
-            border-radius: 20px;
-            padding: 4px 14px;
+            border-radius: 4px;
+            padding: 5px 14px;
         }
 
-        /* paper/white pills (replaced cold/blue) */
         .pill.soft {
             color: var(--paper);
             border-color: var(--paper-border);
             background: var(--paper-dim);
+            border-radius: 4px;
         }
 
         .header-links {
@@ -182,36 +181,58 @@
             background: var(--gold-dim);
         }
 
-        /* ── NAV ── */
+        /* ── SEGMENTED CONTROL NAV ── */
         .nav {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
             margin-bottom: 40px;
         }
 
+        .seg-wrap {
+            display: inline-flex;
+            background: rgba(245,242,235,.05);
+            border: 1px solid rgba(245,242,235,.10);
+            padding: 4px;
+            gap: 2px;
+            position: relative;
+        }
+
+        .seg-indicator {
+            position: absolute;
+            top: 4px;
+            bottom: 4px;
+            background: var(--gold);
+            transition: left .24s ease, width .24s ease;
+            z-index: 0;
+            pointer-events: none;
+        }
+
         .nav-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: var(--sans);
+            font-size: .83rem;
+            font-weight: 400;
+            color: var(--text);
+            padding: 10px 22px;
+            letter-spacing: .03em;
+            transition: color .2s;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 22px;
-            font-size: .85rem;
-            font-weight: 500;
-            font-family: var(--sans);
-            color: var(--text);
-            background: var(--surface);
-            border: 1px solid var(--line);
-            border-radius: 24px;
-            cursor: pointer;
-            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+            white-space: nowrap;
         }
 
-        .nav-btn:hover,
         .nav-btn.active {
-            color: var(--gold);
-            border-color: var(--gold-border);
-            background: var(--gold-dim);
+            color: #0a0a0f;
+            font-weight: 600;
+        }
+
+        .nav-btn:hover:not(.active) {
+            color: rgba(245,242,235,.9);
         }
 
         /* ── SECTIONS ── */
@@ -334,7 +355,6 @@
 
         .card-meta a:hover { color: var(--gold); }
 
-        /* tags — only gold and paper, no blue */
         .tag {
             font-size: .7rem;
             font-weight: 500;
@@ -445,6 +465,7 @@
             .header { padding: 32px 22px 28px; }
             .container { padding: 24px 16px 60px; }
             .footer { flex-direction: column; }
+            .nav-btn { padding: 10px 14px; font-size: .78rem; }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -492,17 +513,20 @@
         </nav>
     </header>
 
-    <!-- ── NAV ── -->
+    <!-- ── SEGMENTED NAV ── -->
     <nav class="nav" role="navigation" aria-label="Project categories">
-        <button class="nav-btn active" data-section="procurement-finops" type="button">
-            <i class="fas fa-chart-line" aria-hidden="true"></i> Procurement &amp; FinOps
-        </button>
-        <button class="nav-btn" data-section="automation-tools" type="button">
-            <i class="fas fa-cogs" aria-hidden="true"></i> Automation &amp; Tools
-        </button>
-        <button class="nav-btn" data-section="learning" type="button">
-            <i class="fas fa-graduation-cap" aria-hidden="true"></i> Learning &amp; Certifications
-        </button>
+        <div class="seg-wrap" id="seg">
+            <div class="seg-indicator" id="seg-ind"></div>
+            <button class="nav-btn active" data-section="procurement-finops" type="button">
+                <i class="fas fa-chart-line" aria-hidden="true"></i> Procurement &amp; FinOps
+            </button>
+            <button class="nav-btn" data-section="automation-tools" type="button">
+                <i class="fas fa-cogs" aria-hidden="true"></i> Automation &amp; Tools
+            </button>
+            <button class="nav-btn" data-section="learning" type="button">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i> Learning &amp; Certs
+            </button>
+        </div>
     </nav>
 
     <!-- ── MAIN ── -->
@@ -665,7 +689,7 @@
 
     </main>
 
-    <!-- ── STATS — generic, no company data ── -->
+    <!-- ── STATS ── -->
     <div class="stats">
         <div class="stat">
             <span class="stat-num">3+</span>
@@ -710,13 +734,30 @@
 </div>
 <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
-    document.querySelectorAll('.nav-btn').forEach(btn => {
+
+    // Segmented control
+    const segBtns = document.querySelectorAll('.nav-btn');
+    const segInd  = document.getElementById('seg-ind');
+
+    function moveIndicator(btn) {
+        segInd.style.left  = btn.offsetLeft + 'px';
+        segInd.style.width = btn.offsetWidth + 'px';
+    }
+
+    // Init on load
+    window.addEventListener('load', () => {
+        const active = document.querySelector('.nav-btn.active');
+        if (active) moveIndicator(active);
+    });
+
+    segBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const target = btn.dataset.section;
-            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            segBtns.forEach(b => b.classList.remove('active'));
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             btn.classList.add('active');
             document.getElementById(target).classList.add('active');
+            moveIndicator(btn);
         });
     });
 </script>
