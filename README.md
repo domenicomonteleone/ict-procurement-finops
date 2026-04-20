@@ -1,85 +1,71 @@
-# data-analytics-portfolio
-Data analytics portfolio focused on business insights, process optimization, and performance improvement.
+# ICT Procurement & FinOps Portfolio
 
-# 📊 Data Analytics Portfolio – Domenico Monteleone
+Portfolio focused on **ICT procurement, cloud cost management and decision-support systems**.
 
-Welcome to my data analytics portfolio.  
-This space collects real-world and course-based projects focused on generating **business insights**, improving **operational efficiency**, and supporting **strategic decision-making** through data.
+---
 
-With a background in **Supply Chain Management**, I apply tools like **R**, **Python**, **Tableau**, and **Power BI** to analyze demand, optimize processes, and turn data into action.
+## 📊 About
+
+This portfolio showcases real-world and simulated projects where I apply **data, automation and financial logic** to support:
+
+- ICT sourcing decisions  
+- Vendor & contract management  
+- Cloud cost optimization (FinOps)  
+- Budget control and forecasting  
+
+With a background in **Supply Chain and Procurement**, I build lightweight, scalable solutions using **Python and SQLite** to replace or complement traditional S2P tools in resource-constrained environments.
 
 ---
 
 ## 🔍 What You'll Find Here
 
-📦 **Business-focused analyses** based on realistic or actual company scenarios  
-🛠️ **End-to-end workflows** using R, Python, SQL, Tableau  
-📈 **Key use cases**: Demand forecasting · Inventory control · Customer service optimization · Process automation
-
-All projects follow a structured, problem-solving approach — often based on frameworks like the Google 6-Phase Analysis (Ask, Prepare, Process, Analyze, Share, Act).
+📦 **Procurement & FinOps systems** built on real invoice data  
+🛠️ **Automation tools** for vendor management and data pipelines  
+📈 **Decision-support models** for budget tracking and cost optimization  
 
 ---
 
 ## 📁 Portfolio Structure
 
-### 🎓 00_Certification-Courses  
-Projects from professional courses:
+### 📊 01_Procurement_FinOps  
+- FinOps reporting systems  
+- Budget monitoring tools  
+- Spend analysis models  
 
-### 🧠 01_Personal-Projects   
-Independent data projects focused on:
+### ⚙️ 02_Automation_Tools  
+- Vendor classification pipelines  
+- Invoice parsers (SDI XML)  
+- Data ingestion workflows  
 
-- Forecasting and inventory efficiency  
-- Supply chain performance tracking  
-- Customer care analysis and reporting  
-- Visualizing operational KPIs with dashboards
-
-### ⚙️ 02_Technology-Based  
-Code-driven exercises and experiments:
-- **R** for forecasting, data cleaning, visualization  
-- **Python** for modeling, automation  
-- **SQL** for querying and business questions
-
-### 📊 03_Dashboards-Interactive  
-Dynamic dashboards built with:
-- Tableau (inventory, sales, CRM)
-- Power BI (operations KPIs, segmentation)
-
-### 📚 04_Resources-Templates  
-Reusable assets: cheat sheets, datasets, templates.
+### 🎓 03_Learning_Projects  
+- Data Analytics (Google)  
+- Supply Chain (Rutgers)  
+- FinOps specialization  
 
 ---
 
-## 💼 Tools & Skills
+## 💼 Core Skills
 
-**Languages & Tools**:  
-R · Python · SQL · Tableau · Power BI · Excel/VBA · Power Query · SAP · Salesforce
+**Procurement & Finance**  
+ICT Sourcing · Vendor Management · Contract Management · FinOps · TCO Modeling  
 
-**Libraries & Packages**:  
-pandas · tidyverse · dplyr · seaborn · ggplot2 · matplotlib
+**Tech Stack**  
+Python · SQLite · Excel · SQL  
 
-**Business Areas**:  
-Supply Chain Planning · Demand Forecasting · Inventory Optimization · CRM Analysis · Customer Service
-
-**Soft Skills**:  
-Cross-functional collaboration · Strategic thinking · International work experience
+**Focus**  
+Cost control · Spend visibility · Decision intelligence  
 
 ---
 
-## 💡 My Philosophy
+## 💡 Philosophy
 
-> “I use data to ask better questions, not just get better answers.  
-> I automate what’s repeatable and analyze what matters.”
-
----
-
-## 🔗 Connect with Me
-
-- [GitHub Analytics Portfolio](https://domenicomonteleone.github.io/data-analytics-portfolio/)
-- [Personal site – Domenico Monteleone](https://domenicomonteleone.altervista.org/)
-- [LinkedIn – Domenico Monteleone](https://www.linkedin.com/in/domenico-monteleone/)
-- [My YouTube Channel](https://www.youtube.com/@domenico.monteleone)
-- [GitHub Profile](https://github.com/domenicomonteleone/)
+> Replace complexity with clarity.  
+> Build systems that make cost and decisions visible.
 
 ---
 
-📌 This portfolio is continuously updated with new projects, tools, and case studies as I grow professionally and expand my impact through data.*
+## 🔗 Links
+
+- Portfolio: https://domenicomonteleone.github.io/data-analytics-portfolio/
+- Website: https://domenicomonteleone.com/
+- LinkedIn: https://www.linkedin.com/in/domenicomonteleone/
