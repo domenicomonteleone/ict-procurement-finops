@@ -66,6 +66,6 @@ Cost control · Spend visibility · Decision intelligence
 
 ## 🔗 Links
 
-- Portfolio: https://domenicomonteleone.github.io/data-analytics-portfolio/
+- Portfolio: https://domenicomonteleone.github.io/ict-procurement-finops/
 - Website: https://domenicomonteleone.com/
 - LinkedIn: https://www.linkedin.com/in/domenicomonteleone/
