@@ -1,71 +1,49 @@
 # ICT Procurement & FinOps Portfolio
+**Domenico Monteleone** · ICT & Cloud Buyer · Genova, Italy
 
-Portfolio focused on **ICT procurement, cloud cost management and decision-support systems**.
-
----
-
-## 📊 About
-
-This portfolio showcases real-world and simulated projects where I apply **data, automation and financial logic** to support:
-
-- ICT sourcing decisions  
-- Vendor & contract management  
-- Cloud cost optimization (FinOps)  
-- Budget control and forecasting  
-
-With a background in **Supply Chain and Procurement**, I build lightweight, scalable solutions using **Python and SQLite** to replace or complement traditional S2P tools in resource-constrained environments.
+Projects applying data, automation and financial logic to ICT procurement,
+cloud cost management and vendor intelligence —
+built with Python and SQLite to support sourcing decisions in resource-constrained environments.
 
 ---
 
-## 🔍 What You'll Find Here
+## About
 
-📦 **Procurement & FinOps systems** built on real invoice data  
-🛠️ **Automation tools** for vendor management and data pipelines  
-📈 **Decision-support models** for budget tracking and cost optimization  
+With a background in Supply Chain and Procurement, I build lightweight decision-support systems
+that replace or complement traditional S2P tools: spend analysis, budget monitoring,
+vendor classification and asset tracking.
 
----
-
-## 📁 Portfolio Structure
-
-### 📊 01_Procurement_FinOps  
-- FinOps reporting systems  
-- Budget monitoring tools  
-- Spend analysis models  
-
-### ⚙️ 02_Automation_Tools  
-- Vendor classification pipelines  
-- Invoice parsers (SDI XML)  
-- Data ingestion workflows  
-
-### 🎓 03_Learning_Projects  
-- Data Analytics (Google)  
-- Supply Chain (Rutgers)  
-- FinOps specialization  
+The focus is on making cost and decisions visible — without relying on expensive SaaS platforms.
 
 ---
 
-## 💼 Core Skills
+## Repository Structure
 
-**Procurement & Finance**  
-ICT Sourcing · Vendor Management · Contract Management · FinOps · TCO Modeling  
-
-**Tech Stack**  
-Python · SQLite · Excel · SQL  
-
-**Focus**  
-Cost control · Spend visibility · Decision intelligence  
+| Folder | Contents |
+|---|---|
+| `01_Procurement_FinOps` | FinOps reporting system, budget monitoring, spend analysis |
+| `02_Automation_Tools` | Vendor classification pipeline, SDI XML invoice importer |
+| `03_Learning_Projects` | Certification capstone projects (Google, Rutgers, FinOps) |
 
 ---
 
-## 💡 Philosophy
+## Core Stack
 
-> Replace complexity with clarity.  
-> Build systems that make cost and decisions visible.
+**Procurement & Finance** — ICT Sourcing · Vendor Management · Contract Management · FinOps · TCO Modeling  
+**Tech** — Python · SQLite · Flask · Excel · Power Query
 
 ---
 
-## 🔗 Links
+## Free Tools & Downloads
 
-- Portfolio: https://domenicomonteleone.github.io/ict-procurement-finops/
-- Website: https://domenicomonteleone.com/
-- LinkedIn: https://www.linkedin.com/in/domenicomonteleone/
+Standalone applications and templates are available as free downloads on the toolkit page:
+
+[domenicomonteleone.com/toolkit](https://domenicomonteleone.com/toolkit/)
+
+---
+
+## Links
+
+[Portfolio](https://domenicomonteleone.github.io/ict-procurement-finops/) ·
+[Website](https://domenicomonteleone.com/) ·
+[LinkedIn](https://www.linkedin.com/in/domenicomonteleone/)
