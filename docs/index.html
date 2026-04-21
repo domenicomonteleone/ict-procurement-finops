@@ -541,6 +541,7 @@
             </div>
             <div class="cards-list">
 
+                <!-- ── UPDATED CARD: FinOps Budget Intelligence System ── -->
                 <article class="card">
                     <p class="card-badge"><i class="fas fa-fire" aria-hidden="true"></i> Featured project</p>
                     <h3 class="card-title">FinOps Budget Intelligence System</h3>
@@ -550,13 +551,20 @@
                         category (OPEX/CAPEX) and recurrence type — enabling continuous monitoring of budget consumption, supplier behaviour
                         and cost anomalies across multiple ICT categories and a structured vendor panel.
                         Outputs a multi-sheet Excel report with spend trends, year-over-year variance, budget vs. forecast and automated alerts
-                        for significant cost deviations.
+                        for significant cost deviations. Full source code available on GitHub; free download also available on
+                        <a href="https://domenicomonteleone.com/toolkit/" target="_blank" rel="noopener">domenicomonteleone.com/toolkit/</a>.
                     </p>
                     <div class="card-meta">
                         <span class="tag soft"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
                         <span class="tag soft"><i class="fas fa-database" aria-hidden="true"></i> SQLite</span>
                         <span class="tag gold"><i class="fas fa-file-excel" aria-hidden="true"></i> Excel Report</span>
                         <span class="tag muted">FinOps · Spend Analysis · Vendor Tracking</span>
+                        <a href="https://github.com/domenicomonteleone/ict-procurement-finops" target="_blank" rel="noopener">
+                            <i class="fab fa-github" aria-hidden="true"></i> Repository
+                        </a>
+                        <a href="https://domenicomonteleone.com/toolkit/" target="_blank" rel="noopener">
+                            <i class="fas fa-download" aria-hidden="true"></i> Free download
+                        </a>
                     </div>
                 </article>
 
@@ -579,6 +587,24 @@
                     </div>
                 </article>
 
+                <article class="card">
+                    <p class="card-badge"><i class="fas fa-file-excel" aria-hidden="true"></i> Template</p>
+                    <h3 class="card-title">KPI Procurement Excel Template</h3>
+                    <p class="card-desc">
+                        Ready-to-use Excel dashboard with interactive charts to monitor the main procurement
+                        and supply chain KPIs — including supplier performance metrics.
+                        Built with Power Query for easy data refresh. A practical starting point for teams
+                        without dedicated BI tooling.
+                    </p>
+                    <div class="card-meta">
+                        <span class="tag soft"><i class="fas fa-file-excel" aria-hidden="true"></i> Excel</span>
+                        <span class="tag muted">Power Query · Dashboard · KPI</span>
+                        <a href="https://domenicomonteleone.com/toolkit/" target="_blank" rel="noopener">
+                            <i class="fas fa-download" aria-hidden="true"></i> Free download
+                        </a>
+                    </div>
+                </article>
+
             </div>
         </section>
 
@@ -587,35 +613,66 @@
             <div class="section-header">
                 <p class="section-label">Section 02</p>
                 <h2 class="section-title">Automation &amp; Reporting Tools</h2>
-                <p class="section-desc">Scripts and utilities automating procurement workflows, data pipelines and operational reporting.</p>
+                <p class="section-desc">Full-stack web applications and dashboards for ICT spend monitoring, asset management and cloud cost control. Free and open source — download available on the toolkit page.</p>
             </div>
             <div class="cards-list">
 
                 <article class="card">
-                    <p class="card-badge"><i class="fas fa-robot" aria-hidden="true"></i> Automation</p>
-                    <h3 class="card-title">Vendor Classification Pipeline</h3>
+                    <p class="card-badge"><i class="fas fa-cloud" aria-hidden="true"></i> Cloud FinOps</p>
+                    <h3 class="card-title">Cloud FinOps Tracker</h3>
                     <p class="card-desc">
-                        Weekly automation script that checks new suppliers appearing in invoice data and flags unclassified vendors for review.
-                        Generates a structured Excel output for manual classification and re-import into the FinOps database —
-                        keeping the vendor master clean without manual intervention.
+                        Python + Flask application with SQLite database for cloud spend control.
+                        Segments costs by provider (AWS, Azure, GCP), service and project tag,
+                        compares actuals against monthly budget and visualises usage trends via Chart.js.
+                        Includes a synthetic dataset with ~550 records covering 2024–2025 for demo purposes.
                     </p>
                     <div class="card-meta">
                         <span class="tag soft"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+                        <span class="tag soft">Flask</span>
                         <span class="tag soft"><i class="fas fa-database" aria-hidden="true"></i> SQLite</span>
-                        <span class="tag muted">Vendor Master · Data Quality · Procurement Ops</span>
+                        <span class="tag muted">Chart.js · Cloud Cost · FinOps</span>
+                        <a href="https://domenicomonteleone.com/toolkit/" target="_blank" rel="noopener">
+                            <i class="fas fa-download" aria-hidden="true"></i> Free download
+                        </a>
                     </div>
                 </article>
 
                 <article class="card">
-                    <p class="card-badge"><i class="fas fa-file-invoice" aria-hidden="true"></i> Data pipeline</p>
-                    <h3 class="card-title">SDI XML Invoice Importer</h3>
+                    <p class="card-badge"><i class="fas fa-chart-bar" aria-hidden="true"></i> Spend analytics</p>
+                    <h3 class="card-title">ICT Spend Analysis Dashboard</h3>
                     <p class="card-desc">
-                        Parser and importer for Italian e-invoices (SDI XML format). Extracts structured data from raw invoice files,
-                        normalises vendor information by VAT number and feeds a SQLite database used for spend analysis and FinOps reporting.
+                        Python + Flask application for ICT spend analysis. Breaks down spend by category
+                        (cloud, software, hardware, security, ICT services), compares actuals vs monthly budget,
+                        tracks year-over-year variance and measures vendor concentration via Pareto curve.
+                        Synthetic dataset included.
                     </p>
                     <div class="card-meta">
                         <span class="tag soft"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
-                        <span class="tag muted">XML Parsing · E-invoicing · Data Pipeline</span>
+                        <span class="tag soft">Flask</span>
+                        <span class="tag muted">Chart.js · JSON · Spend Analysis</span>
+                        <a href="https://domenicomonteleone.com/toolkit/" target="_blank" rel="noopener">
+                            <i class="fas fa-download" aria-hidden="true"></i> Free download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <p class="card-badge"><i class="fas fa-server" aria-hidden="true"></i> Asset management</p>
+                    <h3 class="card-title">CMDB — ICT Analytics Dashboard</h3>
+                    <p class="card-desc">
+                        Full-stack Python + Flask application with ICT asset management, software license tracking,
+                        contracts, vendor management and datacenter energy analytics.
+                        Includes randomly generated demo data for immediate testing.
+                        Also referenced in the Procurement &amp; FinOps section for its TCO and contract renewal capabilities.
+                    </p>
+                    <div class="card-meta">
+                        <span class="tag soft"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+                        <span class="tag soft">Flask</span>
+                        <span class="tag soft"><i class="fas fa-database" aria-hidden="true"></i> SQLite</span>
+                        <span class="tag muted">Matplotlib · Asset Mgmt · TCO</span>
+                        <a href="https://domenicomonteleone.com/toolkit/" target="_blank" rel="noopener">
+                            <i class="fas fa-download" aria-hidden="true"></i> Free download
+                        </a>
                     </div>
                 </article>
 
@@ -712,7 +769,7 @@
     <!-- ── FOOTER ── -->
     <footer class="footer">
         <div class="footer-info">
-            <p>&copy; <span id="yr">2025-2026</span> <a href="https://domenicomonteleone.com">Domenico Monteleone</a></p>
+            <p>&copy; <span id="yr"></span> <a href="https://domenicomonteleone.com">Domenico Monteleone</a></p>
             <p>ICT &amp; Cloud Buyer · Genova, Italy</p>
         </div>
         <div class="footer-links">
@@ -733,9 +790,20 @@
 
 </div>
 <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
+    // ── Dynamic copyright year: always shows 2025–currentYear (or just 2025 if same year)
+    (function () {
+        const START_YEAR = 2025;
+        const now = new Date();
+        const currentYear = now.getFullYear();
+        const el = document.getElementById('yr');
+        if (el) {
+            el.textContent = currentYear > START_YEAR
+                ? START_YEAR + '\u2013' + currentYear
+                : String(START_YEAR);
+        }
+    })();
 
-    // Segmented control
+    // ── Segmented control
     const segBtns = document.querySelectorAll('.nav-btn');
     const segInd  = document.getElementById('seg-ind');
 
@@ -744,7 +812,6 @@
         segInd.style.width = btn.offsetWidth + 'px';
     }
 
-    // Init on load
     window.addEventListener('load', () => {
         const active = document.querySelector('.nav-btn.active');
         if (active) moveIndicator(active);
