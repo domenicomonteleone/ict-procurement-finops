@@ -820,9 +820,14 @@
     }
 
     window.addEventListener('load', () => {
-        const active = document.querySelector('.nav-btn.active');
-        if (active) moveIndicator(active);
-    });
+    const active = document.querySelector('.nav-btn.active');
+    if (active) moveIndicator(active);
+});
+
+window.addEventListener('resize', () => {
+    const active = document.querySelector('.nav-btn.active');
+    if (active) moveIndicator(active);
+});
 
     segBtns.forEach(btn => {
         btn.addEventListener('click', () => {
